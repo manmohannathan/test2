@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Labuan WebAR Scanner</title>
+
+  <!-- MindAR & Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.1.5/dist/mindar-image-three.prod.js"></script>
+  <script src="./coding/data.js"></script>
+  <script src="./coding/main.js" type="module"></script>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    #ar-container {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* Floating Back Button */
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2000;
+      background: rgba(252, 248, 242, 0.9);
+      color: #721c24;
+      border: 2px solid #c9a054;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back-btn">← Exit AR</a>
+
+  <!-- AR Overlay Container -->
+  <div id="ar-container"></div>
+
+</body>
+</html>
